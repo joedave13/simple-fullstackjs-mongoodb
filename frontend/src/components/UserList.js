@@ -19,9 +19,9 @@ const UserList = () => {
       <div className="card">
         <div className="card-header d-flex justify-content-between align-items-center">
           User Table
-          <button type="button" className="btn btn-sm btn-success">
+          <Link to="/create" className="btn btn-sm btn-success">
             Add User
-          </button>
+          </Link>
         </div>
         <div className="card-body">
           <table className="table table-striped table-hover">

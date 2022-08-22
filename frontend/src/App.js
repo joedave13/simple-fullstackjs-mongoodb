@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import UserCreate from './components/UserCreate';
 import UserList from './components/UserList';
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<UserList />} />
+        <Route path="/create" element={<UserCreate />} />
       </Routes>
     </BrowserRouter>
   );
