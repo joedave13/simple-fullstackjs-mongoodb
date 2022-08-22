@@ -14,6 +14,15 @@ const UserList = () => {
     setUsers(response.data);
   };
 
+  const deleteUser = async (id) => {
+    try {
+      await axios.delete(`http://localhost:5000/users/${id}`);
+      getUser();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div className="container mt-5">
       <div className="card">
@@ -50,7 +59,11 @@ const UserList = () => {
                     >
                       Edit
                     </Link>
-                    <button type="button" className="btn btn-sm btn-danger">
+                    <button
+                      onClick={() => deleteUser(user._id)}
+                      type="button"
+                      className="btn btn-sm btn-danger"
+                    >
                       Delete
                     </button>
                   </td>
